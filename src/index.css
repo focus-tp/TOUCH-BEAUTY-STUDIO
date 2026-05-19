@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* 1. Шрифты из HTML шаблона */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Bebas+Neue&display=swap');
+
+/* 2. Настройка темы Tailwind v4 */
+@theme {
+  --font-serif: "DM Serif Display", serif;
+  --font-sans: "DM Sans", sans-serif;
+  --font-bebas: "Bebas Neue", sans-serif;
+
+  --color-ink: #0a0a0a;
+  --color-paper: #fffafc;
+  --color-gold: #b8a98a;
+  --color-silver: #9a9a9a;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-smoke: #111111;
+  --color-mid: #141414;
+}
+
+/* 3. Базовые стили */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink text-paper font-sans antialiased selection:bg-gold selection:text-ink;
+    overflow-x: hidden;
+  }
+}
+
+/* 4. Утилиты */
+.text-balance {
+  text-wrap: balance;
+}
+
+.animate-marquee {
+  animation: marquee 50s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+}

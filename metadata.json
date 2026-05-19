@@ -1,0 +1,6 @@
+{
+  "name": "TOUCH Beauty Studio",
+  "description": "Эстетика премиального сервиса в самом сердце Челябинска. Авторские техники окрашивания и индивидуальный подход.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
