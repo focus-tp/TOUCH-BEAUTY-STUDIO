@@ -27,7 +27,7 @@ const MASTERS = [
   {
     name: "Наталья",
     role: "Body Therapist",
-    bio: "Дипломированный специалист с медицинским бэкграундом. Гарантирует абсолютную безопасность и эффективность каждого сеанса. Владеет широким спектром ручных практик и аппаратных методик. Фокус в работе — комплексное оздоровление, грамотная коррекция фигуры и забота о физическом комфорте клиента",
+    bio: "Дипломированный специалист с медицинским бэкграундом. Гарантирует абсолютную безопасность и эффективность каждого сеанса. Владеет широким спектром косметологических и аппаратных методик. Фокус в работе — комплексное оздоровление, грамотная коррекция фигуры и забота о физическом комфорте клиента",
     photo: nataImage,
   }
 ];
@@ -44,39 +44,38 @@ const PRICE_LIST = [
     category: 'Стрижка и укладка',
     icon: '✂️',
     items: [
-      { name: 'Женская стрижка', price: 'от 1 200 ₽' },
-      { name: 'Мужская стрижка', price: 'от 700 ₽' },
-      { name: 'Укладка', price: 'от 800 ₽' },
-      { name: 'Вечерняя / свадебная', price: 'от 1 500 ₽' },
+      { name: 'Стрижка', price: 'от 1 200 ₽' },
+      { name: 'Пилинг кожи головы (к стрижке)', price: 'от 500 ₽' },
+      { name: 'Укладка', price: 'от 1 200 ₽' },
     ]
   },
   {
     category: 'Окрашивание',
     icon: '🎨',
     items: [
-      { name: 'Окрашивание в тон', price: 'от 2 800 ₽' },
-      { name: 'Выход из чёрного', price: 'от 5 000 ₽' },
-      { name: 'Тотал блонд', price: 'от 5 000 ₽' },
-      { name: 'Креатив / многотоновое', price: 'от 5 000 ₽' },
-      { name: 'Балаяж / омбре', price: 'от 4 000 ₽' },
+      { name: 'В 1 тон', price: 'от 3 000 ₽' },
+      { name: 'Сложное', price: 'от 5 000 ₽' },
+      { name: 'Выход из чёрного', price: 'от 6 000 ₽' },
+      { name: 'Балаяж', price: 'от 6 000 ₽' },
+      { name: 'Мелирование', price: 'от 5 000 ₽' },
+      { name: 'Контуринг', price: 'от 3 000 ₽' },
     ]
   },
   {
     category: 'Уход за волосами',
     icon: '✨',
     items: [
-      { name: 'Ботокс для волос', price: 'от 2 500 ₽' },
-      { name: 'Кератиновое выпрямление', price: 'от 3 500 ₽' },
-      { name: 'Восстанавливающий уход', price: 'от 1 500 ₽' },
+      { name: 'Ампульное восстановление', price: 'от 1 000 ₽' },
+      { name: 'Реконструкция волос', price: 'от 2 000 ₽' },
     ]
   },
   {
     category: 'Брови',
     icon: '🌿',
     items: [
-      { name: 'Коррекция и архитектура', price: 'от 800 ₽' },
-      { name: 'Окрашивание бровей', price: 'от 400 ₽' },
-      { name: 'Ламинирование бровей', price: 'от 1 200 ₽' },
+      { name: 'Брови коррекция и архитектура', price: 'от 1 200 ₽' },
+      { name: 'Окрашивание', price: 'от 800 ₽' },
+      { name: 'Ламинирование', price: 'от 1 500 ₽' },
     ]
   },
   {
@@ -84,7 +83,6 @@ const PRICE_LIST = [
     icon: '💆',
     items: [
       { name: 'Аппаратный массаж', price: 'от 1 000 ₽' },
-      { name: 'Ручной массаж', price: 'от 1 000 ₽' },
     ]
   },
 ];
@@ -383,9 +381,9 @@ export default function App() {
           <div className="flex flex-col">
             <div className="p-11 lg:p-[44px_56px] border-b border-line relative overflow-hidden group hover:bg-white/[0.02] transition-all flex-1 cursor-pointer">
               <Reveal delay={0.1}>
-                <h3 className="font-serif text-[22px] text-paper mb-[10px] leading-[1.1]">Женская & мужская стрижка</h3>
+                <h3 className="font-serif text-[22px] text-paper mb-[10px] leading-[1.1]">Стрижка</h3>
                 <p className="text-[12px] leading-[1.9] text-paper/[0.32] font-light mb-[14px]">
-                  Авторские стрижки с учётом типа лица, волос и образа жизни.
+                  Авторские стрижки и пилинг кожи головы с учётом типа лица, состояния волос и вашего стиля.
                 </p>
               </Reveal>
             </div>
@@ -393,7 +391,7 @@ export default function App() {
               <Reveal delay={0.2}>
                 <h3 className="font-serif text-[22px] text-paper mb-[10px] leading-[1.1]">Брови</h3>
                 <p className="text-[12px] leading-[1.9] text-paper/[0.32] font-light mb-[14px]">
-                  Архитектура, коррекция, окрашивание, ламинирование.
+                  Архитектура, коррекция, бережное окрашивание и ламинирование.
                 </p>
               </Reveal>
             </div>
@@ -402,10 +400,10 @@ export default function App() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 border-t border-line">
            {[
-             { idx: '04', name: 'Массаж', desc: 'Аппаратный и ручной. Мед. образование.', price: 'от 1 000 ₽' },
-             { idx: '05', name: 'Уход', desc: 'Ботокс, кератин, восстановление.', price: 'от 2 000 ₽' },
-             { idx: '06', name: 'Укладка', desc: 'Вечерняя, свадебная, повседневная.', price: 'от 800 ₽' },
-             { idx: '07', name: 'Окрашивание в тон', desc: 'Равномерное окрашивание, корни, глосс.', price: 'от 2 800 ₽' },
+             { name: 'Массаж', desc: 'Аппаратный массаж тела и коррекция фигуры.' },
+             { name: 'Уход', desc: 'Ампульное восстановление и реконструкция волос.' },
+             { name: 'Укладка', desc: 'Повседневная, объемные локоны и вечерние образы.' },
+             { name: 'Окрашивание в тон', desc: 'Равномерное окрашивание, тонирование, контуринг.' },
            ].map((item, idx) => (
              <div key={idx} className={`p-10 lg:p-[40px_36px] relative overflow-hidden group hover:bg-white/[0.02] transition-all border-r last:border-r-0 border-line cursor-pointer`}>
                <Reveal delay={0.1 * idx}>
@@ -458,7 +456,7 @@ export default function App() {
             </div>
             <Reveal delay={0.3}>
                <div className="bg-white/[0.03] border border-line border-l-gold p-[32px_36px] self-center italic font-light text-[12px] leading-[1.8] text-paper/40">
-                  Запись по телефону или WhatsApp.<br />Мастер подберёт оптимальный вариант под ваш запрос и бюджет.
+                  Запись по телефону или онлайн.<br />Мастер подберёт оптимальный вариант под ваш запрос и бюджет.
                </div>
             </Reveal>
          </div>
@@ -561,14 +559,14 @@ export default function App() {
                 </a>
              </div>
              <div className="flex justify-center gap-3 flex-wrap">
-                <a href={WHATSAPP_LINK} className="bg-ink text-paper px-11 py-[15px] text-[10px] uppercase tracking-[0.22em] font-medium transition-colors hover:bg-[#2a2a2a]">
-                  WhatsApp
+                <a href={DIKIDI_LINK} target="_blank" rel="noopener noreferrer" className="bg-ink text-paper px-11 py-[15px] text-[10px] uppercase tracking-[0.22em] font-medium transition-colors hover:bg-[#2a2a2a]">
+                  Онлайн-запись
                 </a>
-                <a href={VK_LINK} target="_blank" className="border border-ink/25 text-ink px-11 py-[14px] text-[10px] uppercase tracking-[0.22em] font-medium hover:border-ink transition-colors">
-                  ВКонтакте
+                <a href={VK_LINK} target="_blank" rel="noopener noreferrer" className="border border-ink/25 text-ink px-11 py-[14px] text-[10px] uppercase tracking-[0.22em] font-medium hover:border-ink transition-colors">
+                   ВКонтакте
                 </a>
                 <a href="tel:+79517783196" className="border border-ink/25 text-ink px-11 py-[14px] text-[10px] uppercase tracking-[0.22em] font-medium hover:border-ink transition-colors">
-                  Позвонить
+                   Позвонить
                 </a>
              </div>
            </Reveal>
@@ -601,7 +599,7 @@ export default function App() {
                 <div className="text-[8px] uppercase tracking-[0.4em] text-gold/65 mb-[18px]">Телефон</div>
                 <a href="tel:+79517783196" className="font-serif text-2xl lg:text-xl font-normal text-paper block leading-[1.4] group-hover:text-gold transition-colors">+7 951 778-31-96</a>
                 <a href="tel:+79936583196" className="font-serif text-[18px] lg:text-[15px] font-normal text-paper/40 block mt-[6px] group-hover:text-gold transition-colors">+7 993 658-31-96</a>
-                <p className="text-[10px] text-silver font-light mt-[10px] leading-[1.6]">Звонки · WhatsApp</p>
+                <p className="text-[10px] text-silver font-light mt-[10px] leading-[1.6]">Звонки для записи и консультаций</p>
               </Reveal>
            </div>
            <div className="p-10 lg:p-[52px] hover:bg-white/[0.03] transition-colors cursor-pointer group">
