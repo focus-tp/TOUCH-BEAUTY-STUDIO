@@ -5,9 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    // ВАЖНО: Имя твоего будущего репозитория на GitHub. 
-    // Когда будешь создавать репозиторий, назови его точно так же!
-    base: '/TOUCH-BEAUTY-STUDIO/',
+    // ВАЖНО: Для собственного домена (touch-beauty.pro) оставляем просто слэш!
+    base: '/',
     
     plugins: [react(), tailwindcss()],
     resolve: {
