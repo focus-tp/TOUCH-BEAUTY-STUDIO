@@ -191,7 +191,9 @@ export default function App() {
             <li><a href="#contacts" className="hover:text-paper transition-colors">Контакты</a></li>
           </ul>
           <a 
-            href="tel:+79517783196"
+            href={DIKIDI_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-paper text-ink px-8 py-3 text-[10px] uppercase tracking-[0.2em] font-medium hover:bg-gold transition-colors"
           >
             Записаться
@@ -224,7 +226,12 @@ export default function App() {
             {item}
           </a>
         ))}
-        <a href="tel:+79517783196" className="mt-8 bg-paper text-ink px-12 py-4 font-bold uppercase tracking-widest text-sm">
+        <a 
+          href={DIKIDI_LINK} 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 bg-paper text-ink px-12 py-4 font-bold uppercase tracking-widest text-sm"
+        >
           Записаться
         </a>
       </motion.div>
@@ -291,7 +298,12 @@ export default function App() {
             transition={{ delay: 1.1 }}
             className="flex items-center gap-8 mt-12 justify-center lg:justify-start"
           >
-            <a href="tel:+79517783196" className="hidden lg:inline-block bg-paper text-ink px-11 py-[15px] text-[10px] uppercase tracking-[0.22em] font-medium transition-transform hover:-translate-y-0.5 hover:bg-gold">
+            <a 
+              href={DIKIDI_LINK} 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden lg:inline-block bg-paper text-ink px-11 py-[15px] text-[10px] uppercase tracking-[0.22em] font-medium transition-transform hover:-translate-y-0.5 hover:bg-gold"
+            >
               Записаться
             </a>
             <a href="#services" className="flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-paper/40 hover:text-paper group transition-all">
